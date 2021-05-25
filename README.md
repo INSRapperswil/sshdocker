@@ -35,7 +35,7 @@ GLOBAL OPTIONS:
    --container-name value, -c value  Target container [$CONTAINER]
    --user value, -u value            User for authentication [$SSH_USER]
    --password value, -p value        Password for authentication [$SSH_PASSWORD]
-   --host-key value, -k value        Host key file path [$HOST_KEY_FILE]
+   --host-key FILE, -k FILE          Host key FILE [$HOST_KEY_FILE]
    --shell value, -s value           Default shell (default: "/bin/sh") [$CONTAINER_SHELL]
    --port value                      Binding port (default: "2222") [$PORT]
    --help, -h                        show help (default: false)
@@ -49,7 +49,7 @@ docker run \
    -v /var/run/docker.sock:/var/run/docker.sock \
    -e CONTAINER=myubuntu \
    -e CONTAINER_SHELL=/bin/bash \
-   -e SSH_USER=admin \
-   -e SSH_PASSWORD=password \
+   -e SSH_USER=customuser \
+   -e SSH_PASSWORD=Super-8ecur3! \
    insost/sshdocker:latest
 ```
