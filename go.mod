@@ -7,6 +7,5 @@ require (
 	github.com/creack/pty v1.1.11
 	github.com/gliderlabs/ssh v0.3.2
 	github.com/urfave/cli/v2 v2.3.0
-	golang.org/x/crypto v0.0.0-20210421170649-83a5a9bb288b // indirect
-	golang.org/x/sys v0.1.0 // indirect
+	golang.org/x/crypto v0.1.0 // indirect
 )
