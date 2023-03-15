@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM golang:1.16 AS builder
+FROM golang:1.20 AS builder
 WORKDIR /go/src/
 
 COPY go.* .
@@ -7,7 +7,7 @@ COPY cmd ./cmd/
 
 RUN CGO_ENABLED=0 GOOS=linux go build -a -o ./bin/sshdocker ./cmd/sshdocker
 
-FROM alpine:3.13.5
+FROM alpine:3.17.2
 RUN apk --no-cache add \
   ca-certificates \
   docker
